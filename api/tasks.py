@@ -29,8 +29,9 @@ def handle_task_retry(instance: TestRunRequest, retry: int) -> None:
 @shared_task
 def execute_test_run_request(instance_id: int, retry: int = 0) -> None:
     instance = TestRunRequest.objects.get(id=instance_id)
-
-    if instance.env.is_busy():
+    count_instance = TestRunRequest.objects.filter(env=instance.env,
+                                                   status=TestRunRequest.StatusChoices.RUNNING.name).count()
+    if instance.env.is_busy() or count_instance > 1:
         handle_task_retry(instance, retry)
         return
 

@@ -6,7 +6,7 @@ import TestExecutionTable from './../../components/TestExecutionTable/TestExecut
 import axios from './../../axios-api'
 import TestItemDetails from "../../components/TestItemDetails/TestItemDetails";
 import AddNewRequest from "../../components/AddNewRequest/AddNewRequest";
-
+import UploadNewFile from "../../components/UploadNewFile/UploadNewFile"
 
 class IONOSTestExecutor extends Component {
   state = {
@@ -115,6 +115,7 @@ class IONOSTestExecutor extends Component {
     }
     return (
         <Aux>
+          <UploadNewFile></UploadNewFile>
           <AddNewRequest
               requester={this.state.requester}
               requesterError={this.state.requesterError}

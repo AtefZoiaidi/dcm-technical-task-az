@@ -7,7 +7,7 @@ chardet==3.0.4
 Django==3.0.14
 idna==2.9
 kombu==4.6.10
-psycopg2
+psycopg2-binary==2.8.6
 pytz==2020.1
 redis==3.4.1
 requests==2.23.0

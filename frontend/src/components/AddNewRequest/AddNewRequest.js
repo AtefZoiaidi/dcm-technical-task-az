@@ -6,6 +6,7 @@ class AddNewRequest extends Component {
 
     return (
         <div className="row">
+           
             <div className="col-md-12">
               <fieldset>
                 <legend>New request</legend>

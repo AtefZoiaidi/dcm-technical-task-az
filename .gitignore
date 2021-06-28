@@ -6,6 +6,7 @@
 # Distribution / packaging
 .Python
 env/
+venv/
 .python-version
 
 # Translations
